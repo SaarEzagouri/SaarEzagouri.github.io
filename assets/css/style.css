@@ -1,3 +1,16 @@
+:root {
+  --bg-page: #0e1b3a;        /* rich, clearly-blue page background */
+  --bg-panel: #16274d;       /* card / nav panel background, one step lighter than page */
+  --bg-panel-alt: #1c2f5e;   /* logo box, intro section */
+  --highlight-blue: #2f6fed; /* vivid mid-blue for title bars & name highlight - pops against the page, not blended into it */
+  --highlight-blue-dark: #1d4ed8;
+  --border-subtle: #2d4272;
+  --blue-accent: #5b9df9;    /* bright accent for links / text highlights */
+  --blue-accent-dark: #1447c9;
+  --text-primary: #f1f5fb;
+  --text-muted: #a7b8dc;
+}
+
 .profile-pic {
   position: relative;
   max-width:130px;
@@ -5,13 +18,9 @@
   width: auto;
   height: auto;
   overflow: hidden;
-  /* display: inline-block; */
-  
-  
-  /* background-size: cover;  */
-  margin: -31px; 
+  margin: -31px;
   margin-left:-7px;
-  border: 6px solid rgba(0, 77, 64, 0.4); 
+  border: 6px solid var(--highlight-blue);
   border-radius: 50% !important;
 }
 
@@ -21,10 +30,8 @@
 }
 
 .tracker {
-  /* visibility: hidden; */
   position: fixed;
-  /* margin-inline-end: auto;  */
-  bottom: 0; 
+  bottom: 0;
   right: 0;
 }
 
@@ -33,7 +40,6 @@
   margin: 0 auto;
   width: auto;
   text-align: inherit;
-  /* padding: 10px; */
 }
 
 .icon-btn {
@@ -48,18 +54,19 @@
   border-radius: 45px;
   display: inline-block;
   margin: 4px;
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 .github {
-  color: black;
+  color: var(--text-primary);
 }
 
 .linkedin {
-  color: #0077b5;
+  color: var(--blue-accent);
 }
 
 .angellist {
-  color: grey;
+  color: var(--text-muted);
 }
 
 .icon-btn:hover {
@@ -72,11 +79,11 @@
 }
 
 .angellist:hover {
-  background-color: grey;
+  background-color: #55708a;
 }
 
 .github:hover {
-  background-color: black;
+  background-color: #24304a;
 }
 
 /* Buttons - Read Me, Contact Us */
@@ -85,7 +92,7 @@
   position: relative;
   padding: 11px 35px;
   background: #fff;
-  color: #00796b;
+  color: var(--highlight-blue-dark);
   border: 2px solid #fff;
   font-weight: 600;
   font-size: 15px;
@@ -94,11 +101,6 @@
   border-radius: 5px;
   -webkit-border-radius: 5px;
 }
-
-/* .readme:hover{
-  color: white;
-  background-color: #00796b;
-} */
 
 .contactme {
   position: relative;
@@ -116,47 +118,24 @@
 }
 
 .contactme:hover{
-  color: #00796b;
+  color: var(--highlight-blue-dark);
   background-color: white;
 }
 /* main body */
 
-/* body-color */
-
 body {
-  color: #333;
+  color: var(--text-primary);
+  background-color: var(--bg-page);
   font-size: 18px;
 }
-
-/* body {
-  color: black;
-  font-size: 18px;
-} */
-
-/* main a -- links */
-
-/* a {
-  color: #009688;
-} */
 
 a {
-  color: #004d40;
+  color: var(--blue-accent);
 }
 
-/* main blockqoute */
-
-/* blockquote {
-  border-left: 5px solid #795548;
-  color: #795548;
-  font-size: 125%;
-  font-weight: 400;
-  margin: 20px 0;
-  padding-left: 1.5rem;
-} */
-
 blockquote {
-  border-left: 5px solid #795548;
-  color: #795548;
+  border-left: 5px solid var(--blue-accent);
+  color: var(--text-muted);
   font-size: 125%;
   font-weight: 400;
   margin: 20px 0;
@@ -175,16 +154,10 @@ blockquote * {
 /* main nav */
 
 nav {
-  background: white;
+  background: var(--bg-page);
   box-shadow: none;
   height: 0;
 }
-
-/* nav {
-  background: rgb(149, 126, 212);
-  box-shadow: none;
-  height: 0;
-} */
 
 nav i {
   padding: 0 15px;
@@ -194,13 +167,8 @@ nav i {
 
 /* main */
 
-/* main {
-  background: url(../../assets/img/bg.png) repeat;
-  padding-left: 190px;
-} */
-
 main {
-  background: url(../../assets/img/bg.png) repeat;
+  background-color: var(--bg-page);
   padding-left: 190px;
 }
 
@@ -223,21 +191,17 @@ ul.side-nav {
   width: 190px;
 }
 
+ul.side-nav.fixed {
+  background-color: var(--bg-panel);
+}
+
 ul.side-nav li {
   padding: 0;
 }
 
-/* ul.side-nav.fixed a {
-  box-sizing: content-box;
-  color: rgb(48, 122, 207);
-  display: block;
-  line-height: 100%;
-  padding: 10px 0 12px;
-} */
-
 ul.side-nav.fixed a {
   box-sizing: content-box;
-  color: rgb(16, 202, 56);
+  color: var(--text-primary);
   display: block;
   line-height: 100%;
   padding: 10px 0 12px;
@@ -248,17 +212,9 @@ ul.table-of-contents li.logo a.active, ul.table-of-contents li.logo a:hover {
   font-weight: 200;
 }
 
-/* ul.side-nav.fixed li.logo {
-  background-color: #fafafa;
-  border-bottom: 1px solid #ddd;
-  box-sizing: content-box;
-  min-height: 90px;
-  padding: 30px 30px 40px;
-} */
-
 ul.side-nav.fixed li.logo {
-  background-color: #fafafa;
-  border-bottom: 1px solid #ddd;
+  background-color: var(--bg-panel-alt);
+  border-bottom: 1px solid var(--border-subtle);
   box-sizing: content-box;
   min-height: 90px;
   padding: 30px 30px 40px;
@@ -270,12 +226,12 @@ ul.side-nav.fixed li.logo a {
 }
 
 ul.table-of-contents li:not(.logo) a.active, ul.table-of-contents li:not(.logo) a:hover {
-  background-color: #fafafa;
-  border-left: 3px solid;
+  background-color: rgba(255, 255, 255, 0.06);
+  border-left: 3px solid var(--blue-accent);
 }
 
 ul.side-nav.fixed.table-of-contents li:not(.logo) a span, ul#slide-out li:not(.logo) a span {
-  color: #333 !important;
+  color: var(--text-primary) !important;
 }
 
 li.logo span {
@@ -312,15 +268,8 @@ h3 {
   height: 100vh;
 }
 
-/* Original */
-
-/* #intro.section {
-  background: url(../../assets/img/white-ai-wallpaper.jpg) no-repeat top center/cover;
-  position: relative;
-} */
-
 #intro.section {
-  background: #a7ffeb repeat;
+  background: linear-gradient(135deg, var(--bg-page) 0%, var(--bg-panel-alt) 100%);
   position: relative;
 }
 
@@ -332,23 +281,14 @@ h3 {
   top: 0;
 }
 
-/* #intro.section .container *:not(span) {
-  font-weight: 300;
-  line-height: 150%;
-  padding: 0 30px;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-} */
-
 #intro.section .container *:not(span) {
   font-weight: 300;
-  /* font-weight: 400; */
   line-height: 150%;
-  /* padding: 0 0px; */
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 #intro.section .underline {
-  border-bottom: 5px solid #24305e;
+  border-bottom: 5px solid var(--blue-accent);
 }
 
 #intro.section .teal {
@@ -356,7 +296,7 @@ h3 {
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.25);
   height: 100%;
   left: 0;
   position: absolute;
@@ -365,13 +305,14 @@ h3 {
 }
 
 .waves-effect.waves-blue .waves-ripple {
-  /* The alpha value allows the text and background color
-   of the button to still show through. */
-  background-color: rgba(33, 150, 243, 0.2);
+  background-color: rgba(77, 171, 247, 0.25);
 }
 
 .card {
   margin-bottom: 60px;
+  background-color: var(--bg-panel) !important;
+  color: var(--text-primary);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
 }
 
 .card .role {
@@ -379,16 +320,17 @@ h3 {
   position: absolute;
   right: 38px;
   top: 35px;
+  color: var(--text-muted);
 }
 
 .card li a {
   margin-right: 0;
-  color: #333;
-  border-bottom: 2px solid #ffab40;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--blue-accent);
 }
 
 .card li a:hover {
-  color: #333;
+  color: #fff;
   font-weight: 500;
 }
 
@@ -398,12 +340,14 @@ h3 {
 
 .card .card-content p {
   padding: 5px 0 0;
+  color: var(--text-primary);
 }
 
 .card h5 {
   font-size: 1.5rem;
   margin-bottom: -0.5rem;
   margin-top: 2rem;
+  color: var(--text-primary);
 }
 
 .card h6 {
@@ -411,10 +355,11 @@ h3 {
   letter-spacing: 1px;
   margin-top: 2rem;
   text-transform: uppercase;
+  color: var(--text-muted);
 }
 
 #experience .card-action {
-  background-color: rgba(0, 0, 0, 0.02);
+  background-color: rgba(255, 255, 255, 0.03);
   border: none;
 }
 
@@ -428,7 +373,7 @@ h3 {
 
 .card-action span {
   font-size: 85%;
-  color: #666;
+  color: var(--text-muted);
 }
 
 .card ul {
@@ -439,15 +384,17 @@ h3 {
   line-height: 200%;
   list-style-type: disc;
   margin-left: 24px;
+  color: var(--text-primary);
 }
 
 .card ul li li {
-  color: #666;
+  color: var(--text-muted);
   font-size: 13px;
 }
 
 .card .card-title {
   font-size: 24px;
+  color: var(--text-primary);
 }
 
 .card .card-content .card-title {
@@ -466,14 +413,8 @@ a.hoverline {
   -webkit-transition: 0.25s all;
 }
 
-/* main a.hoverline */
-
-/* a.hoverline:hover {
-  border-bottom: 3px solid #24305e !important;
-} */
-
 a.hoverline:hover {
-  border-bottom: 3px solid #004d40 !important;
+  border-bottom: 3px solid var(--blue-accent) !important;
 }
 
 #skills .card.large {
@@ -481,9 +422,10 @@ a.hoverline:hover {
 }
 
 #skills h4 {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--border-subtle);
   margin-bottom: 30px;
   padding-bottom: 20px;
+  color: var(--text-primary);
 }
 
 #skills .col img.responsive-img {
@@ -493,6 +435,9 @@ a.hoverline:hover {
   text-align: center;
   vertical-align: middle;
   display: table-cell;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 8px;
 }
 
 .card.large .card-content p {
@@ -502,7 +447,7 @@ a.hoverline:hover {
 }
 
 #experience .card-content .row {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--border-subtle);
   padding-bottom: 10px;
 }
 
@@ -526,6 +471,7 @@ a.hoverline:hover {
   bottom: 6px;
   left: 20px;
   position: relative;
+  color: var(--text-primary);
 }
 
 #experience .col.s12.m2 {
@@ -543,28 +489,16 @@ small {
 }
 
 .grey-text {
-  color: #666 !important;
+  color: var(--text-muted) !important;
 }
-
-/* main .teal-text */
 
 .teal-text {
-  color: #020080 !important;
+  color: var(--blue-accent) !important;
 }
-
-/* .teal-text {
-  color: #0b5e86 !important;
-} */
-
-/* .teal */
 
 .teal {
-  background-color: hsl(239, 100%, 18%) !important;
+  background-color: var(--highlight-blue) !important;
 }
-
-/* .teal {
-  background-color: #00695c !important;
-} */
 
 @media (min-width: 1200px) {
   #experience .container {
@@ -597,12 +531,12 @@ small {
     width: 100%;
   }
   nav {
-    background: #fff;
+    background: var(--bg-panel);
     height: 64px;
     position: absolute;
   }
   nav a.button-collapse, nav a.button-collapse i {
-    color: #009688;
+    color: var(--blue-accent);
     height: 56px;
     line-height: 56px;
   }
@@ -638,6 +572,7 @@ small {
   .name-title span {
     display: block;
     font-size: 14px;
+    color: var(--text-muted);
   }
   h3, .container {
     position: relative;
