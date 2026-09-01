@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -12,7 +12,7 @@
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@SaarEzagouri_RD" />
-  <meta name="author" content="Saar Ezagouri" />
+  <meta name="author" content="Saar Ezagouri, PhD, RD" />
   <link rel="icon" type="image/x-icon" href="assets/img/favicon/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png" />
@@ -235,7 +235,11 @@
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 2.4rem 2.8rem;
+      margin-bottom: 2rem;
       transition: border-color .2s, box-shadow .2s;
+    }
+    .project-card:last-child {
+      margin-bottom: 0;
     }
     .project-card:hover {
       border-color: var(--accent);
@@ -262,6 +266,14 @@
       border-radius: 12px;
       padding: 2rem; display: flex; flex-direction: column; gap: 1rem;
       align-items: center; justify-content: center; min-height: 220px;
+    }
+    .project-img {
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+      object-fit: contain;
     }
     .project-icon { font-size: 3.5rem; margin-bottom: .5rem; }
     .project-visual-text { text-align: center; color: var(--muted); font-size: .9rem; }
@@ -326,7 +338,7 @@
 <body>
 
 <nav>
-  <a class="nav-brand" href="#hero">Saar <span>Ezagouri</span></a>
+  <a class="nav-brand" href="#hero">Saar <span>Ezagouri, PhD, RD</span></a>
   <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.getElementById('navlinks').classList.toggle('open')">
     <i class="fa fa-bars"></i>
   </button>
@@ -344,10 +356,7 @@
       <p class="hero-eyebrow">Computational Biologist &amp; Data Scientist</p>
       <h1 class="hero-name">Hi, I am Saar<br><span class="hl">Ezagouri</span>.</h1>
       <p class="hero-tagline">
-        PhD from the Weizmann Institute of Science. Registered Dietitian. I study how biological clocks,
-        metabolism, and physiology interact &mdash; using computational biology, multi-omics, and data science
-        to turn complex datasets into biological insight.
-      </p>
+        PhD from the Weizmann Institute of Science and Registered Dietitian certified by Ichilov Hospital. Extensive expertise in computational biology, drug discovery, molecular biology, and physiology, with broad experience working across diverse experimental systems, from in vitro models to human studies, and spanning both basic and clinical research.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="#research"><i class="fa fa-flask"></i> View Research</a>
         <a class="btn btn-outline" href="https://scholar.google.com/citations?user=JC14QBAAAAAJ&hl=en" target="_blank" rel="noopener">
@@ -358,7 +367,7 @@
         </a>
       </div>
       <div class="hero-stats">
-        <div class="stat"><span class="stat-num">8</span><span class="stat-label">Peer-reviewed papers</span></div>
+        <div class="stat"><span class="stat-num">9</span><span class="stat-label">Peer-reviewed papers</span></div>
         <div class="stat"><span class="stat-num">1</span><span class="stat-label">US Patent</span></div>
         <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Top journals incl.<br>Cell Metab, Nat Metab, PNAS</span></div>
         <div class="stat"><span class="stat-num">PhD</span><span class="stat-label">Weizmann Institute<br>of Science</span></div>
@@ -370,7 +379,7 @@
       <div class="hero-badges">
         <span class="badge"><i class="fa fa-dna" style="color:var(--accent);margin-right:.35rem"></i>Computational Biologist, PhD</span>
         <span class="badge"><i class="fa fa-apple-whole" style="color:var(--accent);margin-right:.35rem"></i>Registered Dietitian</span>
-        <span class="badge"><i class="fa fa-dumbbell" style="color:var(--accent);margin-right:.35rem"></i>Certified Trainer</span>
+        <span class="badge"><i class="fa fa-dumbbell" style="color:var(--accent);margin-right:.35rem"></i>Certified Fitness Trainer</span>
       </div>
     </div>
   </div>
@@ -389,7 +398,7 @@
     <div class="paper-list">
 
       <div class="paper-card">
-        <span class="paper-rank">#1 &mdash; Flagship paper</span>
+        <span class="paper-rank">#1</span>
         <div class="paper-meta">
           <span class="journal-badge">Cell Metabolism</span>
           <span class="paper-year">2019 &middot; PMID 31006590</span>
@@ -411,6 +420,14 @@
         </div>
         <a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/31006590/" target="_blank" rel="noopener">
           Read full paper <i class="fa fa-arrow-right"></i>
+        </a>
+        <br />
+        <a class="paper-link" href="https://castro.fm/episode/Sx6ZTv" target="_blank" rel="noopener">
+          <i class="fa fa-podcast"></i> Discussed in CHRONO:MEDICINE podcast
+        </a>
+        <br />
+        <a class="paper-link" href="https://www.nature.com/articles/s41574-019-0229-z" target="_blank" rel="noopener">
+          <i class="fa fa-star"></i> Highlighted in Nature Reviews
         </a>
       </div>
 
@@ -472,13 +489,13 @@
         <p class="paper-title">The human blood transcriptome exhibits time-of-day-dependent response to hypoxia: Lessons from the highest city in the world</p>
         <p class="paper-authors">Manella G, <strong>Ezagouri S</strong>, Champigneulle B, Gaucher J, Mendelson M, Lemarie E, Stauffer E, Pichon A, Howe CA, Doutreleau S, Golik M, Verges S, Asher G.</p>
         <p class="paper-abstract">
-          We profiled the blood transcriptome of residents of La Rinconada, Peru &mdash; the world's highest
+          We profiled the blood transcriptome of individuals in La Rinconada, Peru &mdash; the world's highest
           permanently inhabited city at 5,100&nbsp;m &mdash; to study the human circadian response to chronic
           hypoxia. We show that the transcriptomic response to hypoxia is strongly gated by the circadian
           clock, with time of day being a dominant driver of gene expression even under extreme oxygen deprivation.
         </p>
         <div class="paper-significance">
-          <span>Why it matters:</span> The first in-vivo human study to demonstrate circadian gating of the
+          <span>Why it matters:</span> The first in-vivo human study to demonstrate circadian regulation of the
           hypoxia transcriptional response. Findings have direct relevance to altitude medicine, sleep apnea,
           intensive care, and oxygen therapy protocols where timing may be as critical as dosage.
         </div>
@@ -584,6 +601,33 @@
         </a>
       </div>
 
+      <div class="paper-card">
+        <span class="paper-rank">#9</span>
+        <div class="paper-meta">
+          <span class="journal-badge">Current Opinion in Physiology</span>
+          <span class="paper-year">2018 &middot; Review Article</span>
+        </div>
+        <p class="paper-title">Circadian control of mitochondrial dynamics and functions</p>
+        <p class="paper-authors"><strong>Ezagouri S</strong>, Asher G.</p>
+        <p class="paper-abstract">
+          Physiology and behavior in mammals is predominantly under circadian clock control. Circadian clocks
+          are present in nearly every cell of the body and oscillate with a frequency of about 24 h in a
+          self-sustained and cell autonomous manner. These clocks not only play a principal role in metabolic
+          control but concurrently respond to a wide variety of metabolic cues. While various aspects of
+          circadian regulation of metabolic functions have been extensively studied, our knowledge regarding
+          circadian mitochondrial biology is just emerging. This review addresses circadian mitochondrial biology:
+          from diurnal changes in mitochondrial make-up, through dynamics and functions, and discusses potential
+          mechanisms that are implicated in circadian control of mitochondrial biology in mammals.
+        </p>
+        <div class="paper-significance">
+          <span>Review article:</span> Comprehensive review summarizing current knowledge on circadian regulation
+          of mitochondrial biology, dynamics, and function across mammalian tissues.
+        </div>
+        <a class="paper-link" href="https://www.sciencedirect.com/science/article/abs/pii/S2468867318300804" target="_blank" rel="noopener">
+          Read full paper <i class="fa fa-arrow-right"></i>
+        </a>
+      </div>
+
     </div>
 
     <div class="patent-card">
@@ -593,7 +637,7 @@
         <span class="paper-year">Filed 2021 &middot; US20240198099A1</span>
       </div>
       <p class="paper-title">Compositions and Methods for Treating Cancer-Associated Cachexia</p>
-      <p class="paper-authors">Shen X, O'Raw A, Morizio J, Deshmukh A, Erez A, <strong>Ezagouri S</strong>. &mdash; Assignee: Duke University.</p>
+      <p class="paper-authors">Inventors: Shen X, O'Raw A, Morizio J, Deshmukh A, Erez A, <strong>Ezagouri S</strong>. &mdash; Assignee: Duke University.</p>
       <p class="paper-abstract">
         Cancer-associated cachexia is a debilitating wasting syndrome affecting the majority of advanced cancer
         patients and responsible for up to 30% of cancer-related deaths. This patent describes novel compositions
@@ -635,15 +679,15 @@
           <span class="tag">AI/ML</span>
           <span class="tag">Nutrition Science</span>
           <span class="tag">Exercise Physiology</span>
-          <span class="tag">Mobile App</span>
-          <span class="tag">Data Science</span>
+          <span class="tag">Flutter</span>
+          <span class="tag">Digital Health</span>
         </div>
         <a class="btn btn-primary" href="https://www.trysalute.com" target="_blank" rel="noopener">
           <i class="fa fa-arrow-up-right-from-square"></i> Visit Salute
         </a>
       </div>
       <div class="project-visual">
-        <div class="project-icon">&#127947;</div>
+        <img class="project-img" src="assets/graphical_abstracts/salute.png" alt="Salute AI Fitness and Nutrition App" />
         <div>
           <p class="project-visual-title">Salute</p>
           <p class="project-visual-text">Science-Based AI Fitness &amp; Nutrition<br>for those who refuse to settle for average.</p>
@@ -659,6 +703,35 @@
                     color:var(--muted);font-size:.78rem;text-decoration:none;display:flex;align-items:center;gap:.4rem">
             <i class="fab fa-google-play"></i> Google Play
           </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div>
+        <p class="project-type">Computer Vision &amp; Deep Learning</p>
+        <h3 class="project-title">Neonates Counter &mdash; FreezeM</h3>
+        <p class="project-desc">
+          Automated computer vision and deep learning solution for detecting and counting neonate larvae. 
+          Developed for FreezeM to streamline insect farming quality control, high-throughput phenotyping, 
+          and biological assay analysis with precision image processing and robust object detection.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Computer Vision</span>
+          <span class="tag">Deep Learning</span>
+          <span class="tag">Python</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">Image Processing</span>
+        </div>
+        <a class="btn btn-primary" href="https://github.com/SaarEzagouri/NeonatesCounter" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> View on GitHub
+        </a>
+      </div>
+      <div class="project-visual">
+        <img class="project-img" src="assets/graphical_abstracts/neonates.jpg" alt="Neonates Counter - FreezeM" />
+        <div>
+          <p class="project-visual-title">Neonates Counter</p>
+          <p class="project-visual-text">Automated CV &amp; Deep Learning Detection<br>for High-Throughput Insect Counting</p>
         </div>
       </div>
     </div>
